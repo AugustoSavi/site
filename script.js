@@ -50,9 +50,10 @@ Spring Boot
 
 [[b;#00ff00;]Contato]
 
-Celular: +5548998685622
+Whatsapp: [[!;;;;https://wa.me/554899868522?text=Ol%C3%A1!%20Encontrei%20voc%C3%AA%20pelo%20site%20e%20gostaria%20de%20saber%20um%20pouco%20mais%20sobre%20voc%C3%AA.%20Estou%20interessado%20em%20saber%20sobre%20suas%20experi%C3%AAncias%20e%20habilidades.%20Se%20poss%C3%ADvel,%20podemos%20agendar%20uma%20conversa%20para%20discutirmos%20mais%20detalhes.%20Aguardo%20ansiosamente%20sua%20resposta!%20Atenciosamente]Mande uma mensagem]
 Email: augustosavijobs@gmail.com
-LinkedIn: www.linkedin.com/in/augustosavi
+LinkedIn: [[!;;;;https://www.linkedin.com/in/augustosavi/]Connect with me]
+Github: [[!;;;;https://github.com/AugustoSavi]AugustoSavi]
 `
   };
 
@@ -67,7 +68,7 @@ LinkedIn: www.linkedin.com/in/augustosavi
       });
       term.echo('digite o comando + enter para ver mais detalhes')
     } else if (topics.includes(command)) {
-      term.echo(toBold(info[command]), { typing: false, delay: 3 });
+      term.echo(toBold(info[command]));
     } else {
       term.echo('comando não encontrado')
     }
