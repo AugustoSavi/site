@@ -23,7 +23,7 @@ $(document).ready(function () {
   Atualmente trabalhando na stack: PostgreSQL, MongoDB, Docker, Java, Spring boot, AngularJs e JavaScript. 
   Conhecimento intermediário em ReactJs, Python e nos produtos da AWS. 
   Conhecimento básico nos produtos Microsoft Azure. 
-  Foi vencedor do Hackathon Unesc 2020 e menção honrosa no Startup Weekend Criciúma 2019. 
+  Fui vencedor do Hackathon Unesc 2020 e menção honrosa no Startup Weekend Criciúma 2019. 
   No tempo livre, dedica-se a estudar Spring Boot, ReactJs, Python, C++, Segurança da informação 
   e às vezes testa as novas tecnologias que entram no Github trending...
 
