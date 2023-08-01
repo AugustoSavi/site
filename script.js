@@ -1,47 +1,109 @@
-$(document).ready(function() {
+var path = '~/documents/best_candidate_resume';
 
+$(document).ready(function () {
 
   const topics = [
-    "resumo",
-    "experiencia",
-    "formacao",
-    "competencias",
-    "certificacoes",
-    "contatos",
-    "help"
+    "resumo"
   ];
 
   // Informações
   const info = {
-    resumo: "Atualmente trabalhando na stack: PostgreSQL, MongoDB, Docker, Java, Spring boot, AngularJs e JavaScript.\n\nConhecimento intermediário em ReactJs, Python e nos produtos da AWS.\n\nConhecimento básico nos produtos Microsoft Azure.\n\nFui vencedor do Hackathon Unesc 2020 e menção honrosa no Startup Weekend Criciúma 2019.\n\nNo meu tempo livre estou estudando Spring Boot, ReactJs, Python, C++, Segurança da informação e as vezes testando as novas tecnologias que entram no Github trending...",
-    experiencia: "Betha Sistemas\n\nAnalista de sistemas (abril de 2022 - Presente - 1 ano 4 meses)\n\nProgramador de sistemas (junho de 2021 - abril de 2022 - 11 meses)\n\nAssistente de desenvolvimento (dezembro de 2020 - junho de 2021 - 7 meses)\n\n\n\nTecsul Sistemas\n\nAnalista de suporte de sistemas (outubro de 2019 - novembro de 2020 - 1 ano 2 meses)",
-    formacao: "Universidade do Extremo Sul Catarinense\n\nBacharelado, Ciência da Computação (junho de 2017 - julho de 2023)",
-    competencias: "Java\n\nAngularJS\n\nSpring Boot\n\nReactJS\n\nSQL\n\nNoSQL\n\nPython\n\nAWS\n\nMicrosoft Azure\n\nC++\n\nSegurança da Informação\n\nDocker\n\nMongoDB\n\nPostgreSQL\n\nJavaScript",
-    certificacoes: "Semana Omnistack 11\n\nAuto Cad Civil 3D para iniciantes\n\nComo elaborar resumos científicos\n\nIntrodução à linguagem JavaScript\n\nComunicação Oral - Extensão e Ensino/Experiência - Arquitetura e Urbanismo; Engenharia Civil; Ciência da Computação",
-    contatos: "+5548998685622 (Mobile)\n\naugustosavijobs@gmail.com\n\nwww.linkedin.com/in/augustosavi (LinkedIn)"
+    resumo: `
+    _      _   _    ____   _   _   ____    _____    ___        ____       _     __     __  ___ 
+   / \\    | | | |  / ___| | | | | / ___|  |_   _|  / _ \\      / ___|     / \\    \\ \\   / / |_ _|
+  / _ \\   | | | | | |  _  | | | | \\___ \\    | |   | | | |     \\___ \\    / _ \\    \\ \\ / /   | | 
+ / ___ \\  | |_| | | |_| | | |_| |  ___) |   | |   | |_| |      ___) |  / ___ \\    \\ V /    | | 
+/_/   \\_\\  \\___/   \\____|  \\___/  |____/    |_|    \\___/      |____/  /_/   \\_\\    \\_/    |___|
+
+
+[[b;#00ff00;]Cientista da computação | Analista de sistemas Pleno | Java | Node | AngularJS | ReactJS | SQL | NoSQL]
+  Criciúma, Santa Catarina, Brasil
+
+[[b;#00ff00;]Resumo]
+  Atualmente trabalhando na stack: PostgreSQL, MongoDB, Docker, Java, Spring boot, AngularJs e JavaScript. 
+  Conhecimento intermediário em ReactJs, Python e nos produtos da AWS. 
+  Conhecimento básico nos produtos Microsoft Azure. 
+  Foi vencedor do Hackathon Unesc 2020 e menção honrosa no Startup Weekend Criciúma 2019. 
+  No tempo livre, dedica-se a estudar Spring Boot, ReactJs, Python, C++, Segurança da informação 
+  e às vezes testa as novas tecnologias que entram no Github trending...
+
+[[b;#00ff00;]Experiências]
+
+    [[b;#a320ce;]Betha Sistemas]
+    Analista de sistemas (abril de 2022 - Presente - 1 ano 4 meses)
+    Programador de sistemas (junho de 2021 - abril de 2022 - 11 meses)
+    Assistente de desenvolvimento (dezembro de 2020 - junho de 2021 - 7 meses)
+
+    [[b;#a320ce;]Tecsul Sistemas]
+    Analista de suporte de sistemas (outubro de 2019 - novembro de 2020 - 1 ano 2 meses)
+
+[[b;#00ff00;]Formação acadêmica]
+
+Universidade do Extremo Sul Catarinense
+Bacharelado, Ciência da Computação (junho de 2017 - julho de 2023)
+
+[[b;#00ff00;]Principais competências]
+
+Java
+AngularJS
+Spring Boot
+
+[[b;#00ff00;]Contato]
+
+Celular: +5548998685622
+Email: augustosavijobs@gmail.com
+LinkedIn: www.linkedin.com/in/augustosavi
+`
   };
 
   // Initialize the terminal
-  const terminal =  $('body').terminal(function(command, term) {
+  const terminal = $('body').terminal(function (command, term) {
+
+
     if (command === 'help') {
-      term.echo(toBold('Tópicos disponíveis:'));
-      topics.forEach(function(topic) {
+      term.echo(toBold('Comandos disponíveis:'));
+      topics.forEach(function (topic) {
         term.echo(toBold(' - ' + topic));
       });
-      term.echo('digite o topico + enter e acesse o conteudo')
+      term.echo('digite o comando + enter e acesse o conteudo')
     } else if (topics.includes(command)) {
-      term.echo(toBold(info[command]), { typing: true, delay: 30 });
+      term.echo(toBold(info[command]), { typing: false, delay: 3 });
     } else {
       term.echo('comando não encontrado')
     }
   }, {
-    greetings: greetings.innerHTML,
-    prompt: '> '
+    greetings: false,
+    prompt() {
+      return `${color('green', 'best@recruiter')}:${color('blue', path)}$ `;
+    }
   });
 
-  function toBold(string){
+  function toBold(string) {
     return '[[b;;;;;;]' + string + ']'
   }
-  
-  terminal.insert('help');
+
+
+  setTimeout(terminal.exec('resumo'));
+  // setTimeout(terminal.exec('experiencia'), 20000);
+  // setTimeout(terminal.exec('formacao'), 10000);
+  // setTimeout(terminal.exec('competencias'), 15000);
+  // setTimeout(terminal.exec('certificacoes'), 20000);
+  // setTimeout(terminal.exec('contatos'), 25000);
 });
+
+function color(name, string) {
+  var colors = {
+      blue:   '#55f',
+      green:  '#4d4',
+      grey:   '#999',
+      red:    '#A00',
+      yellow: '#FF5',
+      violet: '#a320ce',
+      white:  '#fff'
+  }
+  if (colors[name]) {
+      return '[[;' + colors[name] + ';]' + string + ']';
+  } else {
+      return string;
+  }
+}
