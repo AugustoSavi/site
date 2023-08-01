@@ -65,7 +65,7 @@ LinkedIn: www.linkedin.com/in/augustosavi
       topics.forEach(function (topic) {
         term.echo(toBold(' - ' + topic));
       });
-      term.echo('digite o comando + enter e acesse o conteudo')
+      term.echo('digite o comando + enter para ver mais detalhes')
     } else if (topics.includes(command)) {
       term.echo(toBold(info[command]), { typing: false, delay: 3 });
     } else {
@@ -75,6 +75,17 @@ LinkedIn: www.linkedin.com/in/augustosavi
     greetings: false,
     prompt() {
       return `${color('green', 'best@recruiter')}:${color('blue', path)}$ `;
+    },
+    onInit: function(term) {
+      term.css({
+        'background-color': '#2c001e', // Cor de fundo - #2c001e (tom de azul escuro)
+        'color': '#ffffff', // Cor do texto - #ffffff (branco)
+      });
+      // Definindo cor de destaque de links clicáveis
+      term.css('a', {
+        'color': '#4e9a06', // Cor dos links - #4e9a06 (verde)
+        'text-decoration': 'underline', // Sublinhado nos links
+      });
     }
   });
 
@@ -82,28 +93,22 @@ LinkedIn: www.linkedin.com/in/augustosavi
     return '[[b;;;;;;]' + string + ']'
   }
 
-
-  setTimeout(terminal.exec('resumo'));
-  // setTimeout(terminal.exec('experiencia'), 20000);
-  // setTimeout(terminal.exec('formacao'), 10000);
-  // setTimeout(terminal.exec('competencias'), 15000);
-  // setTimeout(terminal.exec('certificacoes'), 20000);
-  // setTimeout(terminal.exec('contatos'), 25000);
+  terminal.exec('resumo');
 });
 
 function color(name, string) {
   var colors = {
-      blue:   '#55f',
-      green:  '#4d4',
-      grey:   '#999',
-      red:    '#A00',
-      yellow: '#FF5',
-      violet: '#a320ce',
-      white:  '#fff'
+    blue: '#55f',
+    green: '#4d4',
+    grey: '#999',
+    red: '#A00',
+    yellow: '#FF5',
+    violet: '#a320ce',
+    white: '#fff'
   }
   if (colors[name]) {
-      return '[[;' + colors[name] + ';]' + string + ']';
+    return '[[;' + colors[name] + ';]' + string + ']';
   } else {
-      return string;
+    return string;
   }
 }
