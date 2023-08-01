@@ -17,7 +17,7 @@ $(document).ready(function () {
 
 
 [[b;#00ff00;]Cientista da computação | Analista de sistemas Pleno | Java | Node | AngularJS | ReactJS | SQL | NoSQL]
-  Criciúma, Santa Catarina, Brasil
+  Forquilhinha, Santa Catarina, Brasil
 
 [[b;#00ff00;]Resumo]
   Atualmente trabalhando na stack: PostgreSQL, MongoDB, Docker, Java, Spring boot, AngularJs e JavaScript. 
