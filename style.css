@@ -1,3 +1,25 @@
-.terminal {
-  --size: 1.2;
+/* Estilos padrão para dispositivos móveis */
+.mobile-container {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Estilos para telas maiores, como tablets */
+@media (min-width: 768px) {
+  .tablet-container {
+    width: 80%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+/* Estilos para telas maiores, como laptops/desktops */
+@media (min-width: 992px) {
+  .desktop-container {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+  }
 }

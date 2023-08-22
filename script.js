@@ -9,51 +9,49 @@ $(document).ready(function () {
   // Informações
   const info = {
     resumo: `
-    _      _   _    ____   _   _   ____    _____    ___        ____       _     __     __  ___ 
-   / \\    | | | |  / ___| | | | | / ___|  |_   _|  / _ \\      / ___|     / \\    \\ \\   / / |_ _|
-  / _ \\   | | | | | |  _  | | | | \\___ \\    | |   | | | |     \\___ \\    / _ \\    \\ \\ / /   | | 
- / ___ \\  | |_| | | |_| | | |_| |  ___) |   | |   | |_| |      ___) |  / ___ \\    \\ V /    | | 
-/_/   \\_\\  \\___/   \\____|  \\___/  |____/    |_|    \\___/      |____/  /_/   \\_\\    \\_/    |___|
+------- Augusto Savi -------
 
 
-[[b;#00ff00;]Cientista da computação | Analista de sistemas Pleno | Java | Node | AngularJS | ReactJS | SQL | NoSQL]
-  Forquilhinha, Santa Catarina, Brasil
+Vencedor do Hackathon Unesc 2020.
+
+Menção honrosa Startup Weekend Criciúma 2019. 
+
 
 [[b;#00ff00;]Resumo]
-  Atualmente trabalhando na stack: PostgreSQL, MongoDB, Docker, Java, Spring boot, AngularJs e JavaScript. 
-  Conhecimento intermediário em ReactJs, Python e nos produtos da AWS. 
-  Conhecimento básico nos produtos Microsoft Azure. 
-  Fui vencedor do Hackathon Unesc 2020 e menção honrosa no Startup Weekend Criciúma 2019. 
-  No tempo livre, dedica-se a estudar Spring Boot, ReactJs, Python, C++, Segurança da informação 
-  e às vezes testa as novas tecnologias que entram no Github trending...
+  Atualmente trabalhando na stack: 
+    - PostgreSQL
+    - MongoDB
+    - Docker
+    - Java
+    - Spring boot
+    - AngularJs
+    - JavaScript
+
+  Conhecimento intermediário:
+    - ReactJs
+    - Python
+    - AWS 
 
 [[b;#00ff00;]Experiências]
 
     [[b;#a320ce;]Betha Sistemas]
-    Analista de sistemas (abril de 2022 - Presente - 1 ano 4 meses)
-    Programador de sistemas (junho de 2021 - abril de 2022 - 11 meses)
-    Assistente de desenvolvimento (dezembro de 2020 - junho de 2021 - 7 meses)
+    - Analista de sistemas (abr/22 - Presente - 1 ano 4 meses)
+
+    - Programador de sistemas (jun/21 - abl/22 - 11 meses)
+
+    - Assistente de desenvolvimento (dez/20 - jun/21 - 7 meses)
 
     [[b;#a320ce;]Tecsul Sistemas]
-    Analista de suporte de sistemas (outubro de 2019 - novembro de 2020 - 1 ano 2 meses)
+    - Analista de suporte de sistemas (out/19 - nov/20 - 1 ano 2 meses)
 
 [[b;#00ff00;]Formação acadêmica]
-
-Universidade do Extremo Sul Catarinense
-Bacharelado, Ciência da Computação (junho de 2017 - julho de 2023)
-
-[[b;#00ff00;]Principais competências]
-
-Java
-AngularJS
-Spring Boot
+  Bacharelado em Ciência da Computação pela Universidade do Extremo Sul Catarinense (jun/17 - jul/23)
 
 [[b;#00ff00;]Contato]
-
-Whatsapp: [[!;;;;https://wa.me/554899868522?text=Ol%C3%A1!%20Encontrei%20voc%C3%AA%20pelo%20site%20e%20gostaria%20de%20saber%20um%20pouco%20mais%20sobre%20voc%C3%AA.%20Estou%20interessado%20em%20saber%20sobre%20suas%20experi%C3%AAncias%20e%20habilidades.%20Se%20poss%C3%ADvel,%20podemos%20agendar%20uma%20conversa%20para%20discutirmos%20mais%20detalhes.%20Aguardo%20ansiosamente%20sua%20resposta!%20Atenciosamente]Mande uma mensagem]
-Email: augustosavijobs@gmail.com
-LinkedIn: [[!;;;;https://www.linkedin.com/in/augustosavi/]Connect with me]
-Github: [[!;;;;https://github.com/AugustoSavi]AugustoSavi]
+  Whatsapp: [[!;;;;https://wa.me/554899868522?text=Ol%C3%A1!%20Encontrei%20voc%C3%AA%20pelo%20site%20e%20gostaria%20de%20saber%20um%20pouco%20mais%20sobre%20voc%C3%AA.%20Estou%20interessado%20em%20saber%20sobre%20suas%20experi%C3%AAncias%20e%20habilidades.%20Se%20poss%C3%ADvel,%20podemos%20agendar%20uma%20conversa%20para%20discutirmos%20mais%20detalhes.%20Aguardo%20ansiosamente%20sua%20resposta!%20Atenciosamente]Mande uma mensagem]
+  Email: augustosavijobs@gmail.com
+  LinkedIn: [[!;;;;https://www.linkedin.com/in/augustosavi/]Connect with me]
+  Github: [[!;;;;https://github.com/AugustoSavi]AugustoSavi]
 `
   };
 
@@ -95,6 +93,11 @@ Github: [[!;;;;https://github.com/AugustoSavi]AugustoSavi]
   }
 
   terminal.exec('resumo');
+
+  setTimeout(function(){
+    var scroller = document.getElementsByClassName('terminal-scroller');
+    scroller[0].scrollTop = 0;
+  }, 100)
 });
 
 function color(name, string) {
