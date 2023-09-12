@@ -3,12 +3,12 @@ var path = '~/documents/best_candidate_resume';
 $(document).ready(function () {
 
   const topics = [
-    "resumo"
+    "cat cv.md"
   ];
 
   // Informações
   const info = {
-    resumo: `
+    'cat cv.md': `
 ------- Augusto Savi -------
 
 
@@ -48,7 +48,6 @@ Menção honrosa Startup Weekend Criciúma 2019.
   Bacharelado em Ciência da Computação pela Universidade do Extremo Sul Catarinense (jun/17 - jul/23)
 
 [[b;#00ff00;]Contatos]
-  Whatsapp: [[!;;;;https://wa.me/554899868522?text=Ol%C3%A1!%20Encontrei%20voc%C3%AA%20pelo%20site%20e%20gostaria%20de%20saber%20um%20pouco%20mais%20sobre%20voc%C3%AA.%20Estou%20interessado%20em%20saber%20sobre%20suas%20experi%C3%AAncias%20e%20habilidades.%20Se%20poss%C3%ADvel,%20podemos%20agendar%20uma%20conversa%20para%20discutirmos%20mais%20detalhes.%20Aguardo%20ansiosamente%20sua%20resposta!%20Atenciosamente]Mande uma mensagem]
   Email: augustosavijobs@gmail.com
   LinkedIn: [[!;;;;https://www.linkedin.com/in/augustosavi/]conecte-se]
   Github: [[!;;;;https://github.com/AugustoSavi]Acessar]
@@ -92,7 +91,7 @@ Menção honrosa Startup Weekend Criciúma 2019.
     return '[[b;;;;;;]' + string + ']'
   }
 
-  terminal.exec('resumo');
+  terminal.exec('cat cv.md');
 
   setTimeout(function(){
     var scroller = document.getElementsByClassName('terminal-scroller');
