@@ -1,90 +1,76 @@
-/* Estilo para dispositivos móveis (celulares) */
-@media (max-width: 767px) {
-  /* Estilo dos botões */
-  .button {
-    display: flex;
-    width: 50%;
-  }
+body {
+  background-color: #0D1117;
+  color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
 
-  .button a {
-    margin: 20px;
-    font-size: 18px;
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 2.5rem;
   }
 }
 
-/* Estilos para telas maiores, como tablets */
-@media (min-width: 768px) {
-  /* Estilo dos botões */
-  .button {
-    display: flex;
-    width: 50%;
-  }
-
-
-  .button a {
-    margin: 20px;
-    font-size: 24px;
-  }
+.container {
+  background-color: #0D1117;
+  margin: 5% auto;
+  padding: 40px;
+  border-radius: 8px;
+  width: 80%;
+  overflow-y: auto;
 }
 
-/* Estilos para telas maiores, como laptops/desktops */
-@media (min-width: 992px) {
-
-  .button {
-    padding: 20px;
-    width: 40%;
-    display: none;
-  }
-
-  .button a {
-    margin-right: 10px;
-    font-size: 24px;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #FFFFFF;
+  margin-bottom: 0.5em;
 }
 
-.button a {
-  color: white;
-  font-family: Helvetica, sans-serif;
-  font-weight: bold;
-  text-align: center;
+p,
+ol,
+ul {
+  margin-bottom: 1em;
+  color: #FFFFFF;
+}
+
+code {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 2px 6px;
+  color: #FFFFFF;
+  font-size: 1rem;
+}
+
+pre {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 10px;
+  color: #8b949e;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+blockquote {
+  border-left: 4px solid #30363d;
+  padding-left: 15px;
+  color: #c9d1d9;
+}
+
+a {
+  color: #1f6feb;
   text-decoration: none;
-  background-color: #999999;
-  display: block;
-  position: relative;
-  padding: 10px 20px;
-  flex: 3;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  text-shadow: 0px 1px 0px #000;
-  filter: dropshadow(color=#000, offx=0px, offy=1px);
-
-  -webkit-box-shadow: inset 0 1px 0 #FFFFFF, 0 10px 0 #555555;
-  -moz-box-shadow: inset 0 1px 0 #FFFFFF, 0 10px 0 #555555;
-  box-shadow: inset 0 1px 0 #FFFFFF, 0 10px 0 #555555;
-
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
 
-.button a:active {
-  top: 10px;
-  background-color: #333333;
-
-  -webkit-box-shadow: inset 0 1px 0 #FFFFFF, inset 0 -3px 0 #555555;
-  -moz-box-shadow: inset 0 1px 0 #FFFFFF, inset 0 -3px 0 #555555;
-  box-shadow: inset 0 1px 0 #FFFFFF, inset 0 -3px 0 #555555;
-}
-
-.button:after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  padding: 4px;
-  position: absolute;
-  bottom: -15px;
-  left: -4px;
-  z-index: -1;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+a:hover {
+  text-decoration: underline;
 }
